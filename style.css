@@ -133,6 +133,7 @@ tooltip {
    "states" thresholds defined in config.jsonc. */
 #cpu.warning,
 #memory.warning,
+#disk.warning,
 #temperature.warning,
 #battery.warning {
   color: #f5a623;
@@ -140,6 +141,7 @@ tooltip {
 
 #cpu.critical,
 #memory.critical,
+#disk.critical,
 #temperature.critical,
 #battery.critical {
   color: #e74c3c;
@@ -166,6 +168,7 @@ tooltip {
 #pulseaudio,
 #cpu,
 #memory,
+#disk,
 #temperature,
 #battery,
 #tray,

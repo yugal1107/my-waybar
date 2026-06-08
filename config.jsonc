@@ -4,10 +4,9 @@
   "position": "top",
   "spacing": 0,
   "height": 26,
-  "modules-left": ["custom/omarchy", "hyprland/workspaces"],
+  "modules-left": ["custom/omarchy", "hyprland/workspaces", "mpris"],
   "modules-center": [
     "clock",
-    "mpris",
     "custom/update",
     "custom/voxtype",
     "custom/screenrecording-indicator",
@@ -16,12 +15,13 @@
   ],
   "modules-right": [
     "group/tray-expander",
-    "bluetooth",
-    "network",
-    "pulseaudio",
-    "cpu",
+    "disk",
     "memory",
+    "cpu",
     "temperature",
+    "network",
+    "bluetooth",
+    "pulseaudio",
     "battery",
   ],
   "hyprland/workspaces": {
@@ -228,5 +228,18 @@
       "warning": 75,
       "critical": 90,
     },
+  },
+
+  "disk": {
+    "interval": 60,
+    "path": "/",
+    "unit": "GB",
+    "format": "󰋊 {percentage_used}%",
+    "tooltip-format": "Disk ({path})\n{used} GB / {total} GB used ({percentage_used}%)\nFree: {free} GB",
+    "states": {
+      "warning": 80,
+      "critical": 92,
+    },
+    "on-click": "omarchy-launch-or-focus-tui btop",
   },
 }
